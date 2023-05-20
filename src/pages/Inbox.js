@@ -6,7 +6,7 @@ import InboxItem from "./subs/InboxItem";
 
 function Inbox(props) {
   return (
-    <div className={`inbox rel flex colпше `}>
+    <div className={`inbox rel flex col`}>
       {/** Header | UserBox */}
       <UserBox/>
 
