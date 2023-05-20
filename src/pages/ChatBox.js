@@ -8,13 +8,13 @@ function ChatBox(props) {
   return (
     <div className={`chatbox flex rel col`}>
       {/** Chat Header */}
-      <ChatHead />
+      <ChatHead {...props} />
 
       {/** Conversation Box */}
-      <ChatMessages />
+      <ChatMessages {...props} />
 
       {/** Send Box */}
-      <ChatSendBox />
+      <ChatSendBox {...props} />
     </div>
   );
 }
