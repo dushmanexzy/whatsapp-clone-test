@@ -1,10 +1,20 @@
 import React from 'react';
 import {connect} from "react-redux";
+import ChatHead from "./subs/ChatHead";
+import ChatMessages from "./subs/ChatMessages";
+import ChatSendBox from "./subs/ChatSendBox";
 
 function ChatBox(props) {
   return (
-    <div className={`chatbox`}>
-      Chat Box
+    <div className={`chatbox flex rel col`}>
+      {/** Chat Header */}
+      <ChatHead />
+
+      {/** Conversation Box */}
+      <ChatMessages />
+
+      {/** Send Box */}
+      <ChatSendBox />
     </div>
   );
 }
