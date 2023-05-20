@@ -1,0 +1,170 @@
+@import "./Props.scss";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #d5dbdb;
+}
+.font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.splash {
+  width: 400px;
+  height: 400px;
+}
+
+.green-belt {
+  height: 15vh;
+  background: #009788;
+}
+
+.messenger {
+  border-radius: 3px;
+  top: 20px;
+  right: 40px;
+  bottom: 20px;
+  left: 40px;
+  background: #f3f3f3;
+
+  .inbox {
+    border-right: 1px solid #ddd;
+    width: 350px;
+    background: #fff;
+
+    /** Userbox | Header */
+    .userbox {
+      border-radius: 3px 0 0 0;
+      background: #eee;
+
+      .you {
+        flex: 1;
+        padding-left: 12px;
+
+        .user {
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .actions {
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 5px;
+
+        button {
+          margin-left: 1px;
+          width: 50px;
+          height: 50px;
+
+          border: 1px;
+          color: #888;
+          background: #cccccc00;
+        }
+      }
+    }
+
+    /** Search */
+    .search {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 7px 15px;
+
+      .sbox {
+        border-radius: 5px;
+        border: 1px solid #eaeaea;
+        flex: 1;
+        background: #fff;
+        overflow: hidden;
+
+        button {
+          border: 0;
+          padding: 5px;
+          width: 40px;
+          font-size: 22px;
+          color: #888;
+          background: #fff;
+
+          &:hover {
+            color: #222;
+          }
+        }
+
+        input {
+          flex: 1;
+          border: 0;
+        }
+      }
+    }
+
+    /** Conversation */
+    .conv-list {
+      flex: 1;
+      height: calc(100vh - 140px);
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .conversation {
+      padding: 5px 10px;
+
+      .you {
+        width: 50px;
+
+        .user {
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .meta {
+        flex: 1;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 0 0 10px 0;
+
+        .info {
+          flex: 1;
+        }
+
+        .name{
+
+        }
+
+        .last-msg{
+
+        }
+      }
+
+      .extra{
+        .stamp {
+
+        }
+
+        .badge {
+          border-radius: 40px;
+          margin-top: 5px;
+          padding: 0 4px;
+          max-width: 32px;
+          font-size: 12px;
+          text-align: center;
+          background: #2fc32f;
+        }
+      }
+    }
+  }
+
+  .chatbox {
+    flex: 1;
+  }
+}
