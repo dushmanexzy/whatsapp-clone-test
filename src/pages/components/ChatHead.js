@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {connect} from "react-redux";
+import {useSelector} from "react-redux";
 
-function ChatHead(props) {
-  const {user} = props;
+export function ChatHead() {
+  const user = useSelector(state => state.chat.user);
+
   const {ID, dp, name, status} = user;
 
   return (
@@ -25,17 +26,3 @@ function ChatHead(props) {
     </div>
   );
 }
-
-const mapStateToProps = state => {
-  return {
-    ...state.Chat
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setState: (loaded) => dispatch({ type: "CHAT_STATE", state: { loaded: loaded } })
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ChatHead);

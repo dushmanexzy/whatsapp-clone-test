@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBox(props) {
+function SearchBox() {
   return (
     <div className={`search flex`}>
       <div className={`sbox flex aic`}>

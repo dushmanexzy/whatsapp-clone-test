@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
-import App from "./app";
-import Chat from "./chat";
+import {AppReducer} from "./appReducer";
+import {ChatReducer} from "./chatReducer";
 
-export default combineReducers({
-  App, Chat
+export const reducers = combineReducers({
+  app: AppReducer,
+  chat: ChatReducer
 })

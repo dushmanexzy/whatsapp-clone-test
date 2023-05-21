@@ -1,10 +1,9 @@
 import React from 'react';
-import {connect} from "react-redux";
-import SearchBox from "./subs/SearchBox";
-import UserBox from "./subs/UserBox";
-import InboxItem from "./subs/InboxItem";
+import SearchBox from "./components/SearchBox";
+import UserBox from "./components/UserBox";
+import InboxItem from "./components/InboxItem";
 
-function Inbox(props) {
+export function Inbox() {
   return (
     <div className={`inbox rel flex col`}>
       {/** Header | UserBox */}
@@ -22,17 +21,3 @@ function Inbox(props) {
     </div>
   );
 }
-
-const mapStateToProps = state => {
-  return {
-    loaded: state.App.loaded
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setState: (loaded) => dispatch({type: "APP_STATE", state: {loaded: loaded}})
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Inbox);

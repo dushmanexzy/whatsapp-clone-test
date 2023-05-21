@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-function InboxItem(props) {
+function InboxItem() {
   return (
     <div className={`conversation flex rel aic`}>
       <div className={`you rel flex aic`}>

@@ -10,10 +10,10 @@ const initialState = {
     {
       ID: 1,
       uid: 1,
-      text: null,
+      text: 'Three little foxes, who kept their handkerchiefs in cardboard boxes!',
       media: {
-        type: `audio`,
-        src: `https://www.zuz.com.pk/audio.mp3`
+        type: `image`,
+        src: `https://i.pravatar.cc/220`
       }
     },
     {
@@ -31,6 +31,7 @@ const initialState = {
       text: null,
       media: {
         type: `video`,
+        poster: 'https://i.pravatar.cc/220',
         src: `https://www.zuz.com.pk/video.mp4`
       },
     },
@@ -39,11 +40,21 @@ const initialState = {
       uid: 1,
       text: `Some text for a chat.`,
       media: null
+    },
+    {
+      ID: 5,
+      uid: 1,
+      text: `Some text for a chat with video.`,
+      media: {
+        type: `video`,
+        poster: 'https://i.pravatar.cc/220',
+        src: `https://www.zuz.com.pk/video.mp4`
+      }
     }
   ]
 }
 
-export default function (state = initialState, action) {
+export function ChatReducer(state = initialState, action) {
   switch (action.type) {
     case "CHAT_STATE":
       return { ...state, ...action.state }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChatSendBox(props) {
+export function ChatSendBox() {
   return (
     <div className={`sendbox flex aic`}>
       <button className={`icon-insert_emoticon s24`}/>
@@ -9,5 +9,3 @@ function ChatSendBox(props) {
     </div>
   );
 }
-
-export default ChatSendBox;

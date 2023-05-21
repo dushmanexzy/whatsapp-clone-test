@@ -1,12 +1,71 @@
-@import "./Props.scss";
+@import "./colors";
+@import "./Props";
+
+$mbr: 3px; // messenger border-radius
 
 body {
+  width: 100%;
+  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   background: #d5dbdb;
 }
 
 .font {
   font-family: 'Open Sans', sans-serif;
+}
+
+.auth {
+  border-radius: 3px;
+  left: 50%;
+  top: 50%;
+  padding: 10px;
+  width: 700px;
+  text-align: center;
+  background: #fff;
+  transform: translate(-50%, -50%);
+
+  .logo {
+    margin: 0 auto;
+    width: 150px;
+  }
+  .title {
+  }
+
+  .slogan {
+    margin-bottom: 20px;
+  }
+
+  .form {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+
+    button, input {
+      border: 0;
+    }
+
+    input {
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+      margin-bottom: 20px;
+      outline: none;
+    }
+
+    button {
+      border-radius: 40px;
+      margin: 0 auto;
+      width: 200px;
+      height: 50px;
+      color: #fff;
+      background: $themeColor;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 151, 136, 0.58);
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
 }
 
 .splash {
@@ -20,7 +79,7 @@ body {
 }
 
 .messenger {
-  border-radius: 3px;
+  border-radius: $mbr;
   top: 20px;
   right: 40px;
   bottom: 20px;
@@ -34,7 +93,7 @@ body {
 
     /** Userbox | Header */
     .userbox {
-      border-radius: 3px 0 0 0;
+      border-radius: $mbr 0 0 0;
       background: #eee;
 
       .you {
@@ -170,7 +229,7 @@ body {
 
     /** Chatbox | Header */
     .chathead {
-      border-radius: 3px 0 0 0;
+      border-radius: 0 $mbr 0 0;
       background: #f3f3f3;
 
       .you {
@@ -221,14 +280,13 @@ body {
       overflow-y: auto;
 
       .bubble {
-        flex: 1;
         margin: 3px 0;
 
         .ballon {
           display: table;
           border-radius: 8px;
-          padding: 7px 60px 7px 10px;
-          max-width: 75%;
+          padding: 4px 6px;
+          max-width: 400px;
           background: #fff;
 
           &:before {
@@ -258,6 +316,122 @@ body {
           .stamp {
             right: 7px;
             bottom: 7px;
+
+            &.cfff {
+              bottom: 12px;
+              right: 12px;
+              text-shadow: 1px 1px 1px #000;
+            }
+          }
+
+          .text {
+            margin-bottom: 20px;
+            padding: 4px 0;
+          }
+
+          .media {
+            border-radius: 5px;
+            margin: 3px 0;
+            padding: 2px 0;
+            width: 400px;
+            height: 220px;
+
+            .poster {
+              border-radius: 5px;
+              max-width: 100%;
+              height: 100%;
+              background-color: #f1f1f1;
+              background-size: cover !important;
+              background-repeat: no-repeat;
+
+              overflow: hidden;
+
+              .photo {
+                border-radius: 5px;
+                max-width: 100%;
+                height: 100%;
+                background-color: #f1f1f1;
+                background-size: cover !important;
+                background-repeat: no-repeat;
+              }
+            }
+
+            &.video {
+              .photo {
+                @include blur($amt: 2px);
+              }
+
+              .pp {
+                border: 2px solid #fff;
+                border-radius: 20px;
+                width: 40px;
+                height: 40px;
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.5);
+              }
+            }
+
+            &.audio {
+              height: auto !important;
+
+              .audio-player {
+                .pp {
+                  border: 0;
+                  border-radius: 30px;
+                  width: 30px;
+                  height: 30px;
+                  background: rgba(255, 255, 255, 0);
+                }
+
+                .controls {
+                  flex: 1;
+                  padding: 0 10px;
+
+                  .slider {
+                    height: 4px;
+                    background: #ddd;
+
+                    .knob {
+                      left: 0;
+                      border-radius: 20px;
+                      width: 12px;
+                      height: 12px;
+                      background: $themeColor;
+                    }
+                  }
+
+                  .extra {
+                    left: 40px;
+                    right: 40px;
+                    bottom: -8px;
+
+                    .dur {
+                      flex: 1;
+                    }
+
+                    .stmp {
+                      flex: 1;
+                      justify-content: flex-end;
+                      text-align: right;
+                    }
+                  }
+                }
+
+                .udp {
+                  border-radius: 50%;
+                  width: 30px;
+                  height: 30px;
+                  background: #f1f1f1;
+                  overflow: hidden;
+
+                  img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -265,6 +439,8 @@ body {
       .mine {
         justify-content: flex-end;
         .ballon {
+          padding: 4px 6px;
+          max-width: 400px;
           background: #dffdbf;
           &:before {
             content: '';
@@ -296,6 +472,8 @@ body {
     }
 
     .sendbox {
+      border-radius: 0 0 $mbr 0;
+      padding: 10px;
       background: #f3f3f3;
 
       button {

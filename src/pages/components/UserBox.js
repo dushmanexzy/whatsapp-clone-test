@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-function UserBox(props) {
+function UserBox() {
   return (
     <div className={`userbox flex`}>
       <div className={`you rel flex aic`}>
