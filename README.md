@@ -2,12 +2,14 @@
 Инициализирована с помощью Create React App.
 Стек: git, React, Redux, JS, SCSS, axios, GREEN-API
 
+P.S.: иконки для кнопок приложения взяты из [icomoon.io](https://icomoon.io/).
+
 ## Available Scripts
 
 ### `npm start`
 
 Запуск режима разработчика.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Открывается в вашем браузере по ссылке [http://localhost:3000](http://localhost:3000).
 
 Автоперезагрузка страницы.\
 Так же отображаются ошибки в консоли.
